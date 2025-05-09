@@ -1,10 +1,32 @@
 @import "tailwindcss";
 
-@theme{
-  --color-bg-dark: #141c2f;
-  --color-card-dark: #1f2a48;
-  --color-button-dark: #0079fe;
-  --color-icon-dark: #0079fe;
-  --color-subtext-dark: #9da4ba;
-  --color-text-dark: #ffffff;
+@custom-variant dark (&:is(.dark *));
+
+
+@theme inline{
+  --color-bg: var(--color-bg);
+  --color-card: var(--color-card);
+  --color-button: var(--color-button);
+  --color-icon: var(--color-icon);
+  --color-subtext: var(--color-subtext);
+  --color-text: var(--color-text);
 }
+
+
+.light{
+  --color-bg: #E8F9FF;
+  --color-card: #ffffff;
+  --color-button: #0079fe;
+  --color-icon: #0079fe;
+  --color-subtext: #4b6a99;
+  --color-text: #141d2f;
+}
+.dark {
+  --color-bg: #141c2f;
+  --color-card: #1f2a48;
+  --color-button: #0079fe;
+  --color-icon: #0079fe;
+  --color-subtext: #9da4ba;
+  --color-text: #ffffff;
+}
+

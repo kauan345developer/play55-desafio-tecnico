@@ -28,17 +28,17 @@ const emitSearch = () => {
 <template>
   <!-- <div>fazer search debounce</div> -->
   <div
-    class="flex items-center border-none bg-card-dark rounded-xl overflow-hidden w-full max-w-lg px-2 py-3.5 xl:max-w-1/2">
+    class="flex items-center border-none bg-card rounded-xl overflow-hidden w-full max-w-lg px-2 py-3.5 xl:max-w-1/2">
     <div class="pl-3 grid place-items-center">
-      <Icon name="uil:search" class="text-icon-dark text-2xl" />
+      <Icon name="uil:search" class="text-icon text-2xl" />
     </div>
 
     <input 
     v-model="query" type="text" placeholder="Search Github Username...."
-      class="flex-grow px-3 py-2  outline-none text-text-dark placeholder:text-text-dark/70">
+      class="flex-grow px-3 py-2  outline-none text-text placeholder:text-text/70">
 
     <button
-      class="bg-button-dark hover:bg-button-dark/70 text-text-dark rounded-xl text-center w-20 h-10 cursor-pointer"
+      class="bg-button hover:bg-button/70 text-text rounded-xl text-center w-20 h-10 cursor-pointer"
       @click="emitSearch">
       Search
     </button>
