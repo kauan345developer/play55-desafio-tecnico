@@ -1,3 +1,7 @@
+export interface SocialLink {
+  provider: string
+  url: string
+}
 
 export interface GithubUser {
   login: string
@@ -33,4 +37,7 @@ export interface GithubUser {
   following: number
   created_at: string
   updated_at: string
+  social_links: SocialLink[]
 }
+
+export type GithubUserOriginal = Omit<GithubUser, 'social_links'>
