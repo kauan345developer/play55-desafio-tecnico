@@ -17,7 +17,7 @@ defineProps<{
         <div class="flex flex-col justify-between w-full lg:flex-row">
           <div class="space-y-2.5">
             <h1 v-if="data.name" class="text-text text-2xl">{{ data.name }}</h1>
-            <p class="text-icon">@{{ data.login }}</p>
+            <a  class="text-icon" :href="`https://github.com/${data.login}`" >@{{ data.login }}</a>
           </div>
           <p class="text-subtext">joined {{ format(data.created_at, "dd MMM yyyy") }}</p>
         </div>

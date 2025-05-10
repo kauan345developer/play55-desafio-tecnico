@@ -14,7 +14,7 @@ defineProps<{
     <div class="flex-col w-full">
       <div class="flex flex-col gap-2">
         <div>
-          <h1 class="text-text text-2xl">{{ data.nome }}</h1>
+          <h1 v-if="data.nome" class="text-text text-2xl">{{ data.nome }}</h1>
           <a class="text-icon" :href="`https://github.com/${data.usuario}`">@{{ data.usuario }}</a>
         </div>
         <div class="flex gap-2">

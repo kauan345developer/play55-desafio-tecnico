@@ -26,7 +26,7 @@ const searchData = async (valor: string) => {
     data.value = { ...userData, social_links: socialLinksData }
     const historyData = {
       urlImgPerfil: userData.avatar_url,
-      nome: userData.name || "No name",
+      nome: userData.name || "",
       usuario: userData.login,
       dataConsulta: format(new Date(), 'dd/MM/yyyy HH:mm'),
       linksSociais: socialLinksData
