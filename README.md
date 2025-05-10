@@ -2,6 +2,7 @@
 # DevFinder
 
 Uma aplicação web construída com Nuxt.js que permite aos usuários pesquisar perfis do GitHub e visualizar suas informações.
+[Demo](https://play55-desafio-tecnico.vercel.app)
 
 ## Funcionalidades
 

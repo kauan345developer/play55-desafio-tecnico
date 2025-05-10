@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-card flex flex-col flex-grow gap-1 rounded-xl w-full max-w-lg xl:max-w-1/2 p-6 h-full">
+  <div class="bg-card flex flex-col flex-grow gap-1 rounded-xl w-full max-w-lg xl:max-w-1/2 py-4 px-6 h-auto">
     <div class="flex gap-6">
       <div class="h-full w-32">
         <img :src="data.avatar_url" :alt="`user photo from ${data.login}`" class="rounded-full w-24 h-24">
