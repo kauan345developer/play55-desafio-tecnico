@@ -15,4 +15,9 @@ import tailwindcss from "@tailwindcss/vite";
   vite: {
     plugins: [tailwindcss()],
   },
+    runtimeConfig: {
+    public: {
+      GITHUB_TOKEN: process.env.NUXT_PUBLIC_GITHUB_TOKEN
+    }
+  }
 });

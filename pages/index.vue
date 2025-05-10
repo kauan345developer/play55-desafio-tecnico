@@ -5,16 +5,18 @@ import type { IHistoricoDePesquisas } from '~/types/localStorage';
 
 const data = ref<GithubUser | null>(null)
 const { setItem,getItem } = useLocalStorage()
+const config = useRuntimeConfig()
+const token = config.public.GITHUB_TOKEN
 const searchData = async (valor: string) => {
   const userData:GithubUserOriginal = await $fetch(`https://api.github.com/users/${valor}`,{
     headers:{
-      Authorization: `Bearer `
+      Authorization: `Bearer ${token}`
     }
   })
   console.log(userData)
   const socialLinksData:[] = await $fetch(`https://api.github.com/users/${valor}/social_accounts`,{
     headers:{
-      Authorization: `Bearer `
+      Authorization: `Bearer ${token}`
     }
   })
   data.value = {...userData,social_links:socialLinksData}
