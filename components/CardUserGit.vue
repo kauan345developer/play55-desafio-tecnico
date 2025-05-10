@@ -11,13 +11,13 @@ defineProps<{
   <div class="bg-card flex flex-col flex-grow gap-1 rounded-xl w-full max-w-lg xl:max-w-1/2 py-4 px-6 h-auto">
     <div class="flex gap-6">
       <div class="h-full w-32">
-        <img :src="data.avatar_url" :alt="`user photo from ${data.login}`" class="rounded-full w-24 h-24">
+        <img :src="data.avatar_url" :alt="`user photo from ${data.login}`" class="rounded-full w-16 h-16 md:w-24 md:h-24">
       </div>
       <div class="flex gap-2 w-full">
         <div class="flex flex-col justify-between w-full lg:flex-row">
           <div class="space-y-2.5">
             <h1 v-if="data.name" class="text-text text-2xl">{{ data.name }}</h1>
-            <a  class="text-icon" :href="`https://github.com/${data.login}`" >@{{ data.login }}</a>
+            <a class="text-icon" :href="`https://github.com/${data.login}`">@{{ data.login }}</a>
           </div>
           <p class="text-subtext">joined {{ format(data.created_at, "dd MMM yyyy") }}</p>
         </div>

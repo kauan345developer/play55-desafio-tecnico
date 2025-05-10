@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {  GithubUser, GithubUserOriginal, SocialLink } from '~/types/github';
+import type { GithubUser, GithubUserOriginal, SocialLink } from '~/types/github';
 import { format } from 'date-fns';
 import type { IHistoricoDePesquisas } from '~/types/localStorage';
 
@@ -34,22 +34,22 @@ const searchData = async (valor: string) => {
     const history = getItem<IHistoricoDePesquisas[]>('users') || []
     history.unshift(historyData)
     setItem<IHistoricoDePesquisas[]>('users', history)
-  } catch (error:unknown) {
+  } catch (error: unknown) {
     if (typeof error === 'object' && error !== null && 'response' in error) {
-    const apiError = error as { response: { status: number } };
-    if (apiError.response.status === 404) {
-      console.log("entrou");
-      userNotFound.value = true;
-      data.value = null
+      const apiError = error as { response: { status: number } };
+      if (apiError.response.status === 404) {
+        console.log("entrou");
+        userNotFound.value = true;
+        data.value = null
+      } else {
+        genericError.value = true;
+        data.value = null
+      }
     } else {
-      genericError.value = true;
+      // Handle unexpected error types
       data.value = null
+      genericError.value = true;
     }
-  } else {
-    // Handle unexpected error types
-    data.value = null
-    genericError.value = true;
-  }
 
   }
 }
@@ -58,7 +58,7 @@ const searchData = async (valor: string) => {
 
 <template>
   <div class="flex flex-col justify-center items-center gap-4 h-full">
-    
+
     <InputSearch @search="searchData" />
     <CardUserGit v-if="data" :data="data" />
     <div v-else-if="userNotFound" class="bg-card rounded-xl w-full max-w-lg xl:max-w-1/2 h-full p-6">

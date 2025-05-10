@@ -20,7 +20,7 @@ const query = ref('')
 const emit = defineEmits(['search'])
 
 const emitSearch = () => {
-  emit("search",query.value)
+  emit("search", query.value)
 }
 
 </script>
@@ -34,7 +34,9 @@ const emitSearch = () => {
     </div>
 
     <input 
-    v-model="query" type="search" placeholder="Search Github Username...."
+      v-model="query" 
+      type="search" 
+      placeholder="Search Github Username...."
       class="flex-grow px-3 py-2  outline-none text-text placeholder:text-text/70 min-w-0" @keydown.enter="emitSearch">
 
     <button

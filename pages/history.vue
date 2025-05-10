@@ -8,7 +8,7 @@ console.log(history)
 
 <template>
   <div class="flex flex-col justify-center items-center gap-6 h-full w-full">
-    <h1 class="text-6xl text-text">Search History</h1>
+    <h1 class="text-4xl md:text-6xl text-text">Search History</h1>
     <div v-if="history && history.length > 0" class="flex flex-col justify-center items-center gap-4 h-full w-full">
       <CardHistory v-for="(item, index) in history" :key="index" :data="item"/>
     </div>
