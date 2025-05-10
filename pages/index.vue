@@ -9,6 +9,7 @@ const genericError = ref(false)
 const { setItem, getItem } = useLocalStorage()
 const config = useRuntimeConfig()
 const token = config.public.GITHUB_TOKEN
+
 const searchData = async (valor: string) => {
   try {
     const userData: GithubUserOriginal = await $fetch(`https://api.github.com/users/${valor}`, {
@@ -57,6 +58,7 @@ const searchData = async (valor: string) => {
 
 <template>
   <div class="flex flex-col justify-center items-center gap-4 h-full">
+    
     <InputSearch @search="searchData" />
     <CardUserGit v-if="data" :data="data" />
     <div v-else-if="userNotFound" class="bg-card rounded-xl w-full max-w-lg xl:max-w-1/2 h-full p-6">
