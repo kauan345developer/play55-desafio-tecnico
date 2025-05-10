@@ -38,5 +38,6 @@ const searchData = async (valor: string) => {
   <div class="flex flex-col justify-center items-center gap-4 h-full">
     <InputSearch @search="searchData"/>
     <CardUserGit v-if="data" :data="data"/>
+    <FormRecaptcha/>
   </div>
 </template>
