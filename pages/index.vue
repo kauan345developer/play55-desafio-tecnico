@@ -32,7 +32,7 @@ const searchData = async (valor: string) => {
       linksSociais: socialLinksData
     }
     const history = getItem<IHistoricoDePesquisas[]>('users') || []
-    history.push(historyData)
+    history.unshift(historyData)
     setItem<IHistoricoDePesquisas[]>('users', history)
   } catch (error:unknown) {
     if (typeof error === 'object' && error !== null && 'response' in error) {
