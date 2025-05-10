@@ -7,7 +7,7 @@ console.log(history)
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center gap-4 h-full w-full">
+  <div class="flex flex-col justify-center items-center gap-6 h-full w-full">
     <h1 class="text-6xl text-text">Search History</h1>
     <div class="flex flex-col justify-center items-center gap-4 h-full w-full">
       <CardHistory v-for="(item, index) in history" :key="index" :data="item"/>

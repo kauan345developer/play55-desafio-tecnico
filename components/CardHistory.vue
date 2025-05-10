@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-card flex flex-grow rounded-xl h-40 w-full max-w-lg xl:max-w-1/2 p-4 hover:bg-card/40">
+  <div class="bg-card flex flex-grow rounded-xl h-52 w-full max-w-lg lg:h-40 xl:max-w-1/2 p-4 hover:bg-card/40">
     <div class="h-full w-32">
       <img :src="data.urlImgPerfil" :alt="`user photo from ${data.usuario}`" class="rounded-full w-20 h-20">
     </div>

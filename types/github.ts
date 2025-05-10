@@ -41,3 +41,4 @@ export interface GithubUser {
 }
 
 export type GithubUserOriginal = Omit<GithubUser, 'social_links'>
+

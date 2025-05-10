@@ -29,13 +29,15 @@ const toggleTheme = () => {
 <template>
   <div :class="`min-h-screen bg-bg py-8 px-4 space-y-8 ${isDark ? 'dark' : 'light'}`">
 
-    <header class="px-8">
+    <header class="px-0 lg:px-8">
       <div class="flex justify-between ">
-        <p class="text-3xl text-text">
-          DevFinder
-        </p>
+        <NuxtLink to="/">
+          <p class="text-3xl text-text">
+            DevFinder
+          </p>
+        </NuxtLink>
 
-        <div class="flex gap-5 items-center">
+        <div class="flex gap-1 items-center md:gap-5">
           <NuxtLink v-if="currentPath !== '/history'" to="/history">
             <button class="flex items-center cursor-pointer">
               <Icon name="uil:history" class="text-2xl text-text" />
@@ -46,7 +48,7 @@ const toggleTheme = () => {
               <Icon name="uil:home" class="text-2xl text-text" />
             </button>
           </NuxtLink>
-          <button class="flex gap-2 items-center cursor-pointer" @click="toggleTheme">
+          <button class="flex gap-0.5 items-center cursor-pointer md:gap-2" @click="toggleTheme">
             <Icon :name="isDark ? 'uil:moon' : 'uil:sun'" class="text-text text-2xl" />
             <p class="text-text ">{{ isDark ? 'Dark' : 'Light' }} Mode</p>
           </button>

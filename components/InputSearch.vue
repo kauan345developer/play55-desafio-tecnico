@@ -34,11 +34,11 @@ const emitSearch = () => {
     </div>
 
     <input 
-    v-model="query" type="text" placeholder="Search Github Username...."
-      class="flex-grow px-3 py-2  outline-none text-text placeholder:text-text/70">
+    v-model="query" type="search" placeholder="Search Github Username...."
+      class="flex-grow px-3 py-2  outline-none text-text placeholder:text-text/70 min-w-0" @keydown.enter="emitSearch">
 
     <button
-      class="bg-button hover:bg-button/70 text-text rounded-xl text-center w-20 h-10 cursor-pointer"
+      class="bg-button hover:bg-button/70 text-text rounded-xl text-center w-14 h-10 cursor-pointer flex-shrink-0 md:w-24"
       @click="emitSearch">
       Search
     </button>
